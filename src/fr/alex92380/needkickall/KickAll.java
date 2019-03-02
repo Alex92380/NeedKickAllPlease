@@ -13,17 +13,17 @@ public KickAll(Main main) {
 }
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String msg, String[] arg3) {
-		if(true) {
+		if(sender instanceof Player) {
 		for(Player player : Bukkit.getOnlinePlayers()) {
 			if(!player.getName().equalsIgnoreCase(sender.getName())||!player.hasPermission("needkickall.kickall")) {
-				player.kickPlayer(main.getConfig().getString("KickAll.kickMessage").replaceAll("&", "§"));
+				player.kickPlayer(main.getConfig().getString("KickAll.kickMessage").replaceAll("&", "Â§"));
 			
 			}
-			sender.sendMessage("§7[§4NeedKickAllPlease§7]§c Kicked players successfully");
+			sender.sendMessage("Â§7[Â§4NeedKickAllPleaseÂ§7]Â§c Kicked players successfully");
 		}
 			
 		}else {
-			sender.sendMessage("§7[§4NeedKickAllPlease§7]§c You need to be a player to execute this command");
+			sender.sendMessage("Â§7[Â§4NeedKickAllPleaseÂ§7]Â§c You need to be a player to execute this command");
 		}
 		return false;
 	}
