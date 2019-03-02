@@ -1,0 +1,8 @@
+name: NeedKickAllPlease
+version: 1.0
+api-version: 1.13
+main: fr.alex92380.needkickall.Main
+commands:
+  kickall:
+    permission: needkickall.kickall
+    
